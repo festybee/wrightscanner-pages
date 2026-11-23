@@ -206,14 +206,14 @@
   <nav class="nav" aria-label="Section jump links">
     <h2>On this page</h2>
     <ol>
-      <li><a href="#collect">What we collect</a></li>
-      <li><a href="#use">How we use it</a></li>
+      <li><a href="#information-the-app-handles">Information the app handles</a></li>
+      <li><a href="#how-we-use-information">How we use information</a></li>
       <li><a href="#third-parties">Third parties</a></li>
-      <li><a href="#retention">Retention &amp; deletion</a></li>
-      <li><a href="#children">Children's privacy</a></li>
+      <li><a href="#keeping-and-deleting-your-information">Keeping and deleting your information</a></li>
+      <li><a href="#children-s-privacy">Children&#x27;s privacy</a></li>
       <li><a href="#security">Security</a></li>
-      <li><a href="#choices">Your choices</a></li>
-      <li><a href="#changes">Changes</a></li>
+      <li><a href="#your-choices-and-rights">Your choices and rights</a></li>
+      <li><a href="#changes-to-this-policy">Changes to this policy</a></li>
       <li><a href="#contact">Contact</a></li>
     </ol>
   </nav>
@@ -223,182 +223,108 @@
       <div class="br"></div>
       <p class="eyebrow">Privacy Policy</p>
       <h1>WrightScanner</h1>
-      <p class="dateline">Effective date: <strong>October 8, 2026</strong></p>
+      <p class="dateline">Effective date: <strong>November 23, 2026</strong></p>
     </div>
 
-    <p>WrightScanner ("the app," "we," "us") is developed by Pathwright
-    Ltd. This page explains what information the app collects, how
-    it's used, and your choices — written to match exactly what the
-    app does today, not a generic template.</p>
+    <p>WrightScanner ("the app," "we," "us") is developed by Pathwright Ltd, London, United Kingdom. This policy explains what information the app handles, where it goes, and your choices. It's written to match exactly what the app does today, not a generic template.</p>
 
     <div class="summary">
       <h2>The short version</h2>
       <ul>
-        <li>Your scanned documents never leave your device on their own.
-        There is no cloud backup or sync, and we have no server that
-        stores or can see your scans. If you choose to export a scan and
-        share it yourself — for example, saving a PDF to Google Drive,
-        emailing it, or sending it through another app — that happens
-        through Android's own share sheet, entirely under your control.
-        We have no visibility into, or access to, what happens to the
-        file once you've handed it off that way.</li>
-        <li>Text recognition (OCR) runs entirely on your device too —
-        nothing about your documents' content is ever sent anywhere.</li>
-        <li>The only thing that touches a server at all is account sign-in
-        (your email address, or your Google account info if you use Google
-        Sign-In), handled by Google's Firebase Authentication.</li>
-        <li>We don't run ads and don't use any analytics or tracking SDKs,
-        as of this policy's effective date. If that changes, this page
-        will be updated first.</li>
+        <li>Your scans stay on your phone. Scanning, cropping, filters and text recognition all run on your device.</li>
+        <li>An account is optional. If you sign in with Google, it's so you can back up your scans to <strong>your own Google Drive</strong>. The backup goes straight from your phone to your Drive. Pathwright Ltd has no server, never receives your scans, and can't see them.</li>
+        <li>The backup sits in a private app folder in your Drive that only WrightScanner can open. The app can't see or touch anything else in your Drive.</li>
+        <li>You can delete your backup, or any scan in it, at any time, from inside the app or from Google Drive.</li>
+        <li>We don't show ads and don't use analytics or tracking tools. If that changes, this page will be updated first.</li>
       </ul>
     </div>
-
-    <section id="collect">
-      <h2 class="section-title">Information we collect</h2>
-
-      <h3>Account information</h3>
-      <p>If you create an account or sign in, we collect:</p>
-      <ul>
-        <li>The email address and password you sign up with, if you use
-        email/password sign-in. Your password itself is never stored or
-        visible to us — Firebase Authentication handles it
-        directly.</li>
-        <li>Your name, email address, and profile photo from your Google
-        account, if you sign in with Google instead.</li>
-      </ul>
-      <p>This is handled by Firebase Authentication, a service operated by
-      Google LLC. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
-      for how Google itself processes this data.</p>
-      <p>An account is optional. You can scan, save, and export without
-      one.</p>
-
+    <section id="information-the-app-handles">
+      <h2 class="section-title">Information the app handles</h2>
       <h3>Your scans and documents</h3>
-      <p>Every document you scan or import, the text our on-device OCR
-      extracts from it, and any filter you apply are stored only in the
-      app's private storage on your own device. We don't upload them,
-      can't see them, and have no way to access them remotely. Deleting a
-      scan in the app, or uninstalling the app, removes it for good —
-      there's no copy anywhere else to also delete.</p>
-
-      <h3>Exporting and sharing</h3>
-      <p>When you export a scan as a PDF or PNG and choose to share,
-      print, or save it, WrightScanner hands that file to Android's own
-      share sheet — the same system menu every app uses — so you can pick
-      where it goes: Google Drive, email, another app, AirDrop-style
-      transfers, or Android's print dialog. WrightScanner doesn't
-      integrate with Google Drive or any other destination directly,
-      doesn't choose where the file goes, and has no visibility into or
-      access to the file once you've handed it off this way. That
-      transfer is between you and whichever app you pick, governed by
-      that app's own privacy policy.</p>
-
-      <h3>Device permissions</h3>
-      <div class="pill-row">
-        <span class="pill">CAMERA</span>
-        <span class="pill">PHOTO LIBRARY (picker only)</span>
-      </div>
+      <p>Every page you scan or import, the text recognised on it, its name, the filter you chose and the folders you file it in are stored in the app's private storage on your phone. Deleting a scan in the app, or uninstalling the app, removes it from the phone.</p>
+      <p>The app opts out of Android's own app-data backup, so your scans aren't copied to Google by Android itself. The only copy anywhere else is a WrightScanner backup, and only if you turn it on (see "Backup to your Google Drive" below).</p>
+      <h3>Google sign-in (optional)</h3>
+      <p>You can use the whole app without signing in. If you choose "Continue with Google", Google shares your <strong>name, email address and profile photo</strong> with the app. They're kept on your phone, to show which account you're signed in with. Pathwright Ltd doesn't receive or store them. There is no WrightScanner account on any server of ours: your Google account is the account.</p>
+      <h3>Backup to your Google Drive (optional)</h3>
+      <p>When you first back up, the app asks for one extra Google permission: to "see, create, and delete its own configuration data in your Google Drive" (the Drive <code>drive.appdata</code> permission). This lets WrightScanner use a hidden app folder in your Drive. The folder isn't shown in your Drive file list, and the app can't open, list or change any of your other Drive files.</p>
+      <p>A backup copies to that folder:</p>
       <ul>
-        <li><strong>Camera</strong> — used to scan documents, through
-        Google ML Kit's Document Scanner. The scan itself is processed
-        entirely on your device.</li>
-        <li><strong>Photo library access</strong> — used only when you
-        choose "From Photos" to import an existing image as a scan page,
-        through Android's built-in Photo Picker, which doesn't give the app
-        broad access to your gallery.</li>
+        <li>the page images of your scans,</li>
+        <li>each scan's name, date, filter, recognised text and folder,</li>
+        <li>your folder names,</li>
+        <li>scans you deleted from a phone in the last 30 days ("Recently deleted"), so a mistaken delete can be undone.</li>
       </ul>
+      <p>These are sent directly from your phone to Google Drive over an encrypted (HTTPS) connection, using your Google sign-in. They're stored under your Google account, count towards your Google storage, and are protected by Google's security and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Pathwright Ltd never receives a copy and has no access to your Drive.</p>
+      <p>Backups run when you tap <strong>Back up now</strong>, or automatically if you choose Daily, Weekly or Monthly. Automatic backups run only on Wi-Fi. <strong>Restore</strong> downloads scans from the backup onto a phone signed in to the same Google account.</p>
+      <h3>Camera</h3>
+      <p>The camera is used only to scan, and only while you're scanning:</p>
+      <ul>
+        <li>The standard scanner uses Google's ML Kit document scanner, which runs on your device through Google Play services.</li>
+        <li>ID card mode and the optional "New camera (beta)" use the camera directly to show the live preview and take the photo. Finding the page or card edges happens on your phone.</li>
+      </ul>
+      <p>Photos are never uploaded except as part of a backup you turned on. The app doesn't use the microphone.</p>
+      <h3>Photos you import</h3>
+      <p>"From Photos" uses Android's Photo Picker. The app only sees the images you pick, not the rest of your gallery.</p>
+      <h3>Exporting and sharing</h3>
+      <p>When you share, save or print a PDF or image, the app hands the file to Android's share sheet, and you choose where it goes. What happens to it then is between you and the app you pick, under that app's own privacy policy.</p>
+      <h3>Information collected by Google's ML Kit</h3>
+      <p>Text recognition and the document scanner use Google's ML Kit, which runs on your device. Your images and their text are not sent to Google for this. ML Kit may send Google basic technical information (such as device model, Android version and how the ML features performed) to keep the features working and improve them. See Google's <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>.</p>
     </section>
-
-    <section id="use">
+    <section id="how-we-use-information">
       <h2 class="section-title">How we use information</h2>
-      <p>Account information is used solely to let you sign in and to
-      enforce the free-scan limit described above, and may be used to
-      support paid features in the future. We never use it for
-      advertising, and we never sell it.</p>
-      <p>We do not use your scanned content, OCR text, or any document data
-      for any purpose beyond showing it back to you inside the app —
-      we have no access to it to use it for anything else.</p>
+      <p>Your information is used only to provide the app's features: to show your scans, recognise their text, show which Google account you're signed in with, and back your scans up to and restore them from your own Drive. We don't use it for advertising, we don't sell it, and we don't share it with anyone.</p>
+      <p>WrightScanner's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
     </section>
-
     <section id="third-parties">
       <h2 class="section-title">Third parties</h2>
-      <p>The only third-party service we integrate with is Google Firebase
-      (Authentication and Google Sign-In), used strictly to run the sign-in
-      feature described above. We don't integrate any advertising network,
-      analytics SDK, or crash-reporting service today. If that changes
-      — for example, if ads are introduced down the line — this
-      policy will be updated first.</p>
-      <p>Whatever app you choose from Android's share sheet when exporting
-      a scan (see "Exporting and sharing" above) is not an integration of
-      ours — it's a destination you select yourself, outside the app's
-      control.</p>
-    </section>
-
-    <section id="retention">
-      <h2 class="section-title">Data retention and deletion</h2>
       <ul>
-        <li><strong>Your scans</strong>: stay on your device until you
-        delete them yourself or uninstall the app. There's no server copy
-        to also remove.</li>
-        <li><strong>Your account</strong>: delete it anytime from Settings
-        → Account → Delete account. This permanently removes your
-        sign-in record from Firebase; it does not touch any scans already
-        saved on your device. For security, Firebase may ask you to sign
-        out and back in before it allows deleting a long-idle session
-        — if you see that message, that's all it means.</li>
+        <li><strong>Google</strong> provides sign-in, Google Drive (where your backup is stored), and ML Kit (the document scanner and text recognition). Each is covered by <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
       </ul>
+      <p>The app contains no advertising, analytics or crash-reporting tools. If ads are added in future, this policy will be updated first to say what they collect.</p>
     </section>
-
-    <section id="children">
+    <section id="keeping-and-deleting-your-information">
+      <h2 class="section-title">Keeping and deleting your information</h2>
+      <ul>
+        <li><strong>Scans on your phone</strong> stay until you delete them or uninstall the app.</li>
+        <li><strong>Your backup</strong> stays in your Google Drive until you delete it. A scan you delete on your phone moves to "Recently deleted" in the backup at the next backup and is removed for good 30 days later.</li>
+        <li><strong>To delete one scan from the backup:</strong> Account → Backup → Details, then delete it (or "Delete now" under Recently deleted).</li>
+        <li><strong>To delete the whole backup:</strong> Account → Backup → Details → <strong>Delete backup</strong>. Or choose <strong>Remove access to my Google account</strong> and tick "Also delete my backup from Google Drive".</li>
+        <li><strong>Without the app:</strong> in Google Drive on the web, open Settings → Manage apps → WrightScanner → Options → <strong>Delete hidden app data</strong>.</li>
+        <li><strong>To remove WrightScanner's access to your Google account:</strong> Account → Remove access, or at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+        <li><strong>Signing out</strong> removes your name, email and photo from the app on that phone.</li>
+      </ul>
+      <p>Step-by-step instructions are also at <a href="https://wrightscanner.pathwrightltd.com/delete-data.html">wrightscanner.pathwrightltd.com/delete-data</a>. Because we hold none of your data, we can't delete it for you, but we're happy to help. Email us at the address below.</p>
+    </section>
+    <section id="children-s-privacy">
       <h2 class="section-title">Children's privacy</h2>
-      <p>WrightScanner isn't directed at children, and we don't knowingly
-      collect personal information from children under 13 (or the minimum
-      age set by your local law). If you believe a child has created an
-      account, contact us at the address below and we'll delete it.</p>
+      <p>WrightScanner isn't directed at children under 13 (or the minimum age in your country), and we don't knowingly collect their personal information.</p>
     </section>
-
     <section id="security">
       <h2 class="section-title">Security</h2>
-      <p>We rely on your device's own operating system to protect data
-      stored locally, and on Firebase Authentication's security practices
-      for account sign-in. No method of storage or transmission is 100%
-      secure, so we can't promise an absolute guarantee — but nothing
-      about how this app works sends your documents anywhere to put them
-      at risk in the first place.</p>
+      <p>Scans on your phone are protected by Android's app sandbox and your phone's own security. Backups travel to Google Drive over encrypted connections and are stored under your Google account. No method of storage or transmission is completely secure, but the app is designed so your documents never pass through a server of ours.</p>
     </section>
-
-    <section id="choices">
-      <h2 class="section-title">Your choices</h2>
+    <section id="your-choices-and-rights">
+      <h2 class="section-title">Your choices and rights</h2>
       <ul>
-        <li>Most of the app — scanning, cropping, filtering,
-        exporting, and sharing — works without ever creating an
-        account.</li>
-        <li>You can delete any scan at any time from within the app.</li>
-        <li>You can delete your account at any time (see "Data retention
-        and deletion" above).</li>
-        <li>Depending on where you live, you may have additional rights
-        — for example under the GDPR or CCPA — to access,
-        correct, or request deletion of your personal data. Since the only
-        personal data we hold is your account email (and, optionally, your
-        Google profile info), contacting us below covers all of it.</li>
+        <li>Use the app without signing in, and without backup.</li>
+        <li>Back up by hand only, or turn automatic backup off at any time.</li>
+        <li>Delete any scan, or your whole backup, at any time.</li>
+        <li>Depending on where you live (for example under the UK GDPR, the EU GDPR or US state laws), you may have rights to access, correct or delete your personal data. Pathwright Ltd holds none of your scans or account details, so you can do all of this yourself in the app and your Google account. Contact us below if you need help.</li>
       </ul>
     </section>
-
-    <section id="changes">
+    <section id="changes-to-this-policy">
       <h2 class="section-title">Changes to this policy</h2>
-      <p>If we materially change what data we collect or how we use it,
-      we'll update this page and change the effective date above.</p>
+      <p>If we change what the app collects or how it's used, we'll update this page and the effective date above before the change reaches the app.</p>
     </section>
-
     <section id="contact">
       <h2 class="section-title">Contact</h2>
-      <p>Questions about this policy? Contact us at:</p>
-      <p style="font-family: var(--font-mono); font-size: 1.05rem;">hello@pathwrightltd.com</p>
+      <p>Questions about this policy? Contact Pathwright Ltd at: <strong>hello@pathwrightltd.com</strong></p>
     </section>
 
     <footer>
       This page is generated from <code>PRIVACY_POLICY.md</code> in the
       WrightScanner repository, which is the version-controlled source of
-      truth. Update that file first, then update this page to match.
+      truth. Update that file first, then regenerate this page.
     </footer>
   </main>
 </div>

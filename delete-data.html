@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Delete WrightScanner Data</title>
+<meta name="description" content="How to delete your WrightScanner scans, your Google Drive backup, and WrightScanner's access to your Google account.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* Layout: single-column legal document, corner-bracket "viewfinder"
+     motif on the masthead nods to a scan screen without illustrating one;
+     a sticky section rail on wide screens doubles as a scroll progress cue. */
+  :root {
+    --bg: #f4f6f9;
+    --surface: #ffffff;
+    --fg: #1a2233;
+    --muted: #5c6880;
+    --accent: #2954c8;
+    --accent-soft: #e8edfb;
+    --border: #dde3ee;
+    --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", "SF Mono", Consolas, monospace;
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #10141c;
+      --surface: #161b25;
+      --fg: #e7ebf3;
+      --muted: #8d97ad;
+      --accent: #7c9cff;
+      --accent-soft: #1d2740;
+      --border: #28303f;
+      color-scheme: dark;
+    }
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-body);
+    padding-inline: 20px;
+    padding-block: 28px;
+    line-height: 1.6;
+  }
+  a { color: var(--accent); }
+
+  .page {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+  }
+  .nav {
+    position: sticky;
+    top: 28px;
+    width: 200px;
+    flex: 0 0 200px;
+    min-width: 0;
+    font-size: 0.82rem;
+  }
+  .nav h2 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin: 0 0 10px;
+  }
+  .nav ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  .nav a {
+    color: var(--muted);
+    text-decoration: none;
+    display: block;
+    border-left: 2px solid transparent;
+    padding-left: 10px;
+  }
+  .nav a:hover { color: var(--fg); border-left-color: var(--border); }
+
+  main {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: 680px;
+  }
+
+  .masthead {
+    position: relative;
+    padding: 28px 8px 26px;
+    margin-bottom: 8px;
+  }
+  .masthead::before, .masthead::after,
+  .masthead .br::before, .masthead .br::after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--accent);
+    opacity: 0.55;
+  }
+  .masthead::before { top: 0; left: 0; border-right: none; border-bottom: none; }
+  .masthead::after { top: 0; right: 0; border-left: none; border-bottom: none; }
+  .masthead .br::before { bottom: 0; left: 0; border-right: none; border-top: none; }
+  .masthead .br::after { bottom: 0; right: 0; border-left: none; border-top: none; }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 4vw, 2.5rem);
+    line-height: 1.15;
+    margin: 0 0 10px;
+  }
+  .dateline {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  .dateline strong { color: var(--fg); font-weight: 600; }
+
+  .summary {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 22px;
+    margin: 26px 0 36px;
+  }
+  .summary h2 {
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    font-size: 0.74rem;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+  .summary ul { margin: 0; padding-left: 1.2em; }
+  .summary li { margin-bottom: 8px; }
+  .summary li:last-child { margin-bottom: 0; }
+
+  section { margin: 0 0 34px; scroll-margin-top: 20px; }
+  h2.section-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    border-top: 1px solid var(--border);
+    padding-top: 22px;
+    margin: 0 0 14px;
+  }
+  h3 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 18px 0 8px;
+  }
+  p { margin: 0 0 12px; }
+  ul { padding-left: 1.3em; margin: 0 0 12px; }
+  li { margin-bottom: 6px; }
+
+  .pill-row { display: flex; gap: 8px; flex-wrap: wrap; margin: 14px 0; }
+  .pill {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    border-radius: 999px;
+    padding: 4px 11px;
+    color: var(--muted);
+  }
+
+  footer {
+    border-top: 1px solid var(--border);
+    margin-top: 10px;
+    padding-top: 18px;
+    font-size: 0.82rem;
+    color: var(--muted);
+  }
+
+  @media (max-width: 760px) {
+    .page { flex-direction: column; gap: 20px; }
+    .nav { position: static; width: 100%; flex: none; }
+    .nav ol { flex-direction: row; flex-wrap: wrap; gap: 10px 16px; }
+    .nav a { border-left: none; padding-left: 0; }
+    main { max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav" aria-label="Section jump links">
+    <h2>On this page</h2>
+    <ol>
+      <li><a href="#what">What there is to delete</a></li>
+      <li><a href="#backup">Delete your backup</a></li>
+      <li><a href="#access">Remove access</a></li>
+      <li><a href="#phone">Scans on your phone</a></li>
+      <li><a href="#help">Need help?</a></li>
+      <li><a href="index.html">Privacy Policy</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <div class="masthead">
+      <div class="br"></div>
+      <p class="eyebrow">Delete your data</p>
+      <h1>WrightScanner</h1>
+      <p class="dateline">By <strong>Pathwright Ltd</strong></p>
+    </div>
+
+    <div class="summary">
+      <h2>The short version</h2>
+      <ul>
+        <li>WrightScanner has no server and no account of its own. Signing
+        in uses your Google account, and backups are kept in your own
+        Google Drive.</li>
+        <li>So there's nothing held by Pathwright Ltd to delete: you can
+        delete everything yourself, in the app or in your Google account,
+        using the steps below.</li>
+      </ul>
+    </div>
+
+    <section id="what">
+      <h2 class="section-title">What there is to delete</h2>
+      <ul>
+        <li><strong>Your backup</strong> (if you turned backup on): your
+        scans' page images, names, recognised text and folders, plus
+        "Recently deleted" scans, in a hidden WrightScanner folder in your
+        Google Drive.</li>
+        <li><strong>WrightScanner's access</strong> to your Google account
+        (sign-in, and permission to use its own Drive folder).</li>
+        <li><strong>Scans on your phone</strong>, in the app's private
+        storage.</li>
+      </ul>
+    </section>
+
+    <section id="backup">
+      <h2 class="section-title">Delete your backup</h2>
+      <h3>In the app</h3>
+      <ul>
+        <li>Open <strong>Account</strong> (your photo at the top of Home),
+        then <strong>Backup → Details → Delete backup</strong>. You stay
+        signed in.</li>
+        <li>Or tap <strong>Remove access to my Google account</strong> and
+        tick <strong>Also delete my backup from Google Drive</strong>. This
+        deletes the backup and signs you out.</li>
+        <li>To delete just one scan from the backup, open
+        <strong>Backup → Details</strong> and tap its delete button.</li>
+      </ul>
+      <h3>Without the app</h3>
+      <ul>
+        <li>On a computer, open <a href="https://drive.google.com">Google
+        Drive</a> signed in to the same Google account.</li>
+        <li>Click the <strong>Settings</strong> gear, then
+        <strong>Settings → Manage apps</strong>.</li>
+        <li>Find <strong>WrightScanner</strong>, click
+        <strong>Options → Delete hidden app data</strong>, and
+        confirm.</li>
+      </ul>
+      <p>Deleting the backup is permanent. Scans on your phone aren't
+      touched.</p>
+    </section>
+
+    <section id="access">
+      <h2 class="section-title">Remove WrightScanner's access</h2>
+      <ul>
+        <li>In the app: <strong>Account → Remove access to my Google
+        account</strong>.</li>
+        <li>Or in your Google account: open
+        <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>,
+        choose <strong>WrightScanner</strong>, and remove its access.</li>
+      </ul>
+      <p>Removing access doesn't delete your backup by itself. Delete the
+      backup first (above) if you want it gone too.</p>
+    </section>
+
+    <section id="phone">
+      <h2 class="section-title">Scans on your phone</h2>
+      <p>Delete a scan in the app (tap the ⋮ menu next to it, then Delete), or
+      uninstall WrightScanner to remove every scan on that phone.</p>
+    </section>
+
+    <section id="help">
+      <h2 class="section-title">Need help?</h2>
+      <p>Email us and we'll walk you through it:</p>
+      <p style="font-family: var(--font-mono); font-size: 1.05rem;">hello@pathwrightltd.com</p>
+    </section>
+
+    <footer>
+      See also the <a href="index.html">WrightScanner Privacy Policy</a>.
+    </footer>
+  </main>
+</div>
+</body>
+</html>
