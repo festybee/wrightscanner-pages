@@ -234,9 +234,14 @@
     <div class="summary">
       <h2>The short version</h2>
       <ul>
-        <li>Your scanned documents never leave your device. There is no
-        cloud backup or sync, and we have no server that stores or can
-        see your scans.</li>
+        <li>Your scanned documents never leave your device on their own.
+        There is no cloud backup or sync, and we have no server that
+        stores or can see your scans. If you choose to export a scan and
+        share it yourself — for example, saving a PDF to Google Drive,
+        emailing it, or sending it through another app — that happens
+        through Android's own share sheet, entirely under your control.
+        We have no visibility into, or access to, what happens to the
+        file once you've handed it off that way.</li>
         <li>Text recognition (OCR) runs entirely on your device too —
         nothing about your documents' content is ever sent anywhere.</li>
         <li>The only thing that touches a server at all is account sign-in
@@ -264,10 +269,8 @@
       <p>This is handled by Firebase Authentication, a service operated by
       Google LLC. See <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>
       for how Google itself processes this data.</p>
-      <p>You can use the app without an account for your first 3 saved
-      scans. Beyond that, an account is required to keep saving — a
-      simple usage limit tracked by a small counter stored only on your own
-      device, never on a server.</p>
+      <p>An account is optional. You can scan, save, and export without
+      one.</p>
 
       <h3>Your scans and documents</h3>
       <p>Every document you scan or import, the text our on-device OCR
@@ -276,6 +279,18 @@
       can't see them, and have no way to access them remotely. Deleting a
       scan in the app, or uninstalling the app, removes it for good —
       there's no copy anywhere else to also delete.</p>
+
+      <h3>Exporting and sharing</h3>
+      <p>When you export a scan as a PDF or PNG and choose to share,
+      print, or save it, WrightScanner hands that file to Android's own
+      share sheet — the same system menu every app uses — so you can pick
+      where it goes: Google Drive, email, another app, AirDrop-style
+      transfers, or Android's print dialog. WrightScanner doesn't
+      integrate with Google Drive or any other destination directly,
+      doesn't choose where the file goes, and has no visibility into or
+      access to the file once you've handed it off this way. That
+      transfer is between you and whichever app you pick, governed by
+      that app's own privacy policy.</p>
 
       <h3>Device permissions</h3>
       <div class="pill-row">
@@ -306,12 +321,16 @@
 
     <section id="third-parties">
       <h2 class="section-title">Third parties</h2>
-      <p>The only third-party service involved is Google Firebase
+      <p>The only third-party service we integrate with is Google Firebase
       (Authentication and Google Sign-In), used strictly to run the sign-in
       feature described above. We don't integrate any advertising network,
       analytics SDK, or crash-reporting service today. If that changes
       — for example, if ads are introduced down the line — this
       policy will be updated first.</p>
+      <p>Whatever app you choose from Android's share sheet when exporting
+      a scan (see "Exporting and sharing" above) is not an integration of
+      ours — it's a destination you select yourself, outside the app's
+      control.</p>
     </section>
 
     <section id="retention">
